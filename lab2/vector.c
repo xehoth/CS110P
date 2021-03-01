@@ -126,7 +126,7 @@ void vector_set(vector_t *v, size_t loc, int value) {
         abort();
     }
     if (loc >= v->size) {
-        int new_size = loc * 2;
+        int new_size = loc + 1;
         v->data = (int *)realloc(v->data, new_size * sizeof(int));
         memset(v->data + v->size, 0, sizeof(int) * (new_size - v->size));
         v->size = new_size;
