@@ -22,7 +22,7 @@ change `t3` to `0xD` after `lw t3, 0(t3)`.
 `k` -> `t0`
 
 `source` -> `t1`  
-`data` -> `t2`
+`dest` -> `t2`
 
 ```
 loop:
