@@ -39,3 +39,10 @@ exit:
 
 `t3 = t0 << 2 = t0 * 4`, `t4 = t1 + t3`  
 `address = start + offset * 4`
+
+### A C perspective of pointer in assembly:
+
+All pointers could be stored in a register, seeing that their sizes are exactly 4 bytes on 32-bit system.
+
+Pointers in assembly are just like `char*`/`unsigned char*` in C. Adding one to a pointer (i.e. p+1) means moving one byte forward(i.e. p+1).
+
