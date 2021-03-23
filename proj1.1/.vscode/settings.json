@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "translate_utils.h": "c",
+        "translate.h": "c"
+    }
+}
