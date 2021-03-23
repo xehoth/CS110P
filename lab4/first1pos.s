@@ -69,28 +69,48 @@ first1posshift:
 	# ret = -1
 	li a0, -1
 	beqz a1, first1posshift_return
-	# cnt = -1
-	li t1, -1
+	# ret = 31
+	li a0, 31
 	first1posshift_loop:
 		# while (a1 != 0)
-		beqz a1, first1posshift_return
-		# ret++
-		addi t1, t1, 1
-		# t0 = a1 & 1
-		andi t0, a1, 1
-		addi t0, t0, -1
-		# if (t0 == 1) -> if (--t0 == 0)
-		first1posshift_loop_if_t0_eq1_if:
-			bne t0, x0, first1posshift_loop_if_t0_eq1_else
-			# ret = cnt
-			mv a0, t1
-		first1posshift_loop_if_t0_eq1_else:
-		# a1 >>= 1
-		srli a1, a1, 1
+		beqz a1, first1posmask_return
+		li t0, 0x80000000
+		# get the sign bit
+		and t0, t0, a1
+		# sign bit mask
+		li t2, 0x80000000
+		# if (sign bit is 1)
+		beq t0, t2, first1posshift_return
+		addi a0, a0, -1 # ret--
+		slli a1, a1, 1 # a1 <<= 1
 		j first1posshift_loop
-	
 	first1posshift_return:
 	ret
+	# # ret = -1
+	# li a0, -1
+	# beqz a1, first1posshift_return
+	# # cnt = -1
+	# li t1, -1
+	# first1posshift_loop:
+	# 	# while (a1 != 0)
+	# 	beqz a1, first1posshift_return
+	# 	# ret++
+	# 	addi t1, t1, 1
+	# 	# t0 = a1 & 1
+	# 	andi t0, a1, 1
+	# 	addi t0, t0, -1
+	# 	# if (t0 == 1) -> if (--t0 == 0)
+	# 	first1posshift_loop_if_t0_eq1_if:
+	# 		bne t0, x0, first1posshift_loop_if_t0_eq1_else
+	# 		# ret = cnt
+	# 		mv a0, t1
+	# 	first1posshift_loop_if_t0_eq1_else:
+	# 	# a1 >>= 1
+	# 	srli a1, a1, 1
+	# 	j first1posshift_loop
+	
+	# first1posshift_return:
+	# ret
 
 
 first1posmask:
