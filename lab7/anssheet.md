@@ -1,17 +1,18 @@
 ## ex2
 
 $$
-t_{clock} = 45+60+5 = 110\text{ns} \\
-f = \frac 1 {t_{clock}}=9\times10^{6}=1\text{MHz}
+t_{clock} = 10 + 45+60+10 = 125\text{ns} \\
+f = \frac 1 {t_{clock}}=8\times10^{6}=8\text{MHz}
 $$
 
 ## ex3
 
 $$
-t_{max} = 5+60 = 65\\
-f = \frac 1{t_{max}} = 1.67\times10^7 = 15.4\text{MHz}
+t_{max} = 10+60+10 = 80\mathrm{ns}\\
+f = \frac 1{t_{max}} = 1.25\times10^7 = 12.5\text{MHz}
 $$
 
 ## ex4
 
 Because the PLUS pipeline is always triggered after the MULT pipeline.
+
