@@ -52,4 +52,4 @@ each line only has compulsory miss.
 
 a. jki
 b. jkj, kij
-c. 
+c. 最内层循环访问至少两行（因为行是第二维，按行维护好的空间局部性）的更优
