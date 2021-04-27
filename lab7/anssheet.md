@@ -12,7 +12,3 @@ t_{max} = 10+60+10 = 80\mathrm{ns}\\
 f = \frac 1{t_{max}} = 1.25\times10^7 = 12.5\text{MHz}
 $$
 
-## ex4
-
-Because the PLUS pipeline is always triggered after the MULT pipeline.
-
