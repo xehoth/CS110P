@@ -53,3 +53,41 @@ each line only has compulsory miss.
 a. jki
 b. jkj, kij
 c. 最内层循环访问至少两行（因为行是第二维，按行维护好的空间局部性）的更优
+
+## Ex 3
+
+```
+❯ ./transpose 100 20
+Testing naive transpose: 0.011 milliseconds
+Testing transpose with blocking: 0.01 milliseconds
+❯ ./transpose 1000 20
+Testing naive transpose: 1.335 milliseconds
+Testing transpose with blocking: 1.091 milliseconds
+❯ ./transpose 2000 20
+Testing naive transpose: 26.514 milliseconds
+Testing transpose with blocking: 4.565 milliseconds
+❯ ./transpose 5000 20
+Testing naive transpose: 216.853 milliseconds
+Testing transpose with blocking: 30.098 milliseconds
+❯ ./transpose 10000 20
+Testing naive transpose: 992.617 milliseconds
+Testing transpose with blocking: 175.859 milliseconds
+```
+
+```
+❯ ./transpose 10000 50
+Testing naive transpose: 987.405 milliseconds
+Testing transpose with blocking: 150.587 milliseconds
+❯ ./transpose 10000 100
+Testing naive transpose: 985.25 milliseconds
+Testing transpose with blocking: 141.814 milliseconds
+❯ ./transpose 10000 500
+Testing naive transpose: 988.408 milliseconds
+Testing transpose with blocking: 139.85 milliseconds
+❯ ./transpose 10000 1000
+Testing naive transpose: 991.017 milliseconds
+Testing transpose with blocking: 201.876 milliseconds
+❯ ./transpose 10000 5000
+Testing naive transpose: 1019.35 milliseconds
+Testing transpose with blocking: 982.79 milliseconds
+```
