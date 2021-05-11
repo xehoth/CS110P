@@ -1,0 +1,3 @@
+_mm_div_ps
+_mm_max_epi8
+_mm_sra_epi16
