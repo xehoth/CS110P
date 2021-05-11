@@ -51,8 +51,8 @@ each line only has compulsory miss.
 ## Ex 2
 
 a. jki
-b. jkj, kij
-c. 最内层循环访问至少两行（因为行是第二维，按行维护好的空间局部性）的更优
+b. ikj, kij
+c. 最内层循环访问至少两行且按行连续（因为行是第二维，按行维护好的空间局部性）的更优
 
 ## Ex 3
 
